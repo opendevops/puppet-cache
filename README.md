@@ -1,5 +1,14 @@
 # cache
 
+example:
+
+```
+include cache
+cache::memcached { 'memcached': }
+cache::opcache { 'opcache': prod_mode => $prodMode }
+```
+
+
 #### Table of Contents
 
 1. [Overview](#overview)

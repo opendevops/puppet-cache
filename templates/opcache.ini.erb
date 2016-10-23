@@ -1,0 +1,14 @@
+; configuration for php opcache module
+; priority=10
+zend_extension=opcache.so
+
+opcache.max_accelerated_files=<%= @max_accelerated_files %>
+opcache.memory_consumption=<%= @memory_consumption %>
+opcache.interned_strings_buffer=<%= @interned_strings_buffer %>
+opcache.fast_shutdown=<%= @fast_shutdown %>
+
+# comment out validate_timestamps in dev environment and set validate_timestamps=0 in prod
+<%= @validate_timestamps %>
+# When validate_timestamps=0, opcache.revaliate_freq is ignored and PHP files are NEVER checked for updated code
+# When validate_timestamps=0 has been commented out, opcache.revaliate_freq is used
+opcache.revalidate_freq=0

@@ -23,17 +23,17 @@
 #
 # === Examples
 #
-#  class { 'cache':
-#    servers => [ 'pool.ntp.org', 'ntp.local.company.com' ],
-#  }
+# include cache
+# cache::memcached { 'memcached': }
+# cache::opcache { 'opcache': prod_mode => $prodMode }
 #
 # === Authors
 #
-# Author Name <author@domain.com>
+# Matthew Hansen
 #
 # === Copyright
 #
-# Copyright 2016 Your name here, unless otherwise noted.
+# Copyright 2016 Matthew Hansen
 #
 class cache {
 
